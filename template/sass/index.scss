@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* For 华夏银行-信用卡中心 project At 2015-12-20 By likuan*/
+/*全局style*/
+@import 'global';
+/*页面*/
+body {
+    @include ss(() (bgc #fff)(bgs 100%));
+}
+.page-size {
+    @include ss(() (who) (miw 320) (maw 414) (jz));
+}
+.ya{
+  @include ss(()(w 10));
+}

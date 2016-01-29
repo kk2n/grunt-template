@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <meta charset="UTF-8">
+    <title>template Project</title>
+    <script src="Scripts/jquery.js"></script>
+    <script src="Scripts/global.js"></script>
+    <script src="Scripts/Bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+  <div class="waikuang">
+    <button class="open-dialog">ww</button>
+  </div>
+
+  <!--错误提示-->
+  <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true"
+       id="ErrDialog">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true" class="close_g">&times;</span> </button>
+                  <h1 class="modal-title text-center">信息提示</h1>
+              </div>
+              <div class="modal-body">
+                  <div class="row">
+                      <div class="col-xs-1"></div>
+                      <div class="col-xs-22">
+                          <div class="err_wen">错误提示！js改变内容.</div>
+                      </div>
+                      <div class="col-xs-1"></div>
+                  </div>
+                  <div class="button-c">
+                      <span class="button-qr btn-a">确定</span>
+                      <span class="button-qx btn-a">取消</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+</html>

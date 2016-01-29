@@ -1,0 +1,8 @@
+
+/* page1的样式表*/
+.mama{
+  @include ss(()(w 20));
+  & span{
+    @include ss(()(h 40));
+  }
+}
