@@ -9,32 +9,55 @@
 2、进入刚建立的那个目录后，再新建分别新建几个文件，做成项目的基本目录结构。
 
 我个人喜好的结构是
+
 myproject
+
 开发目录
+
 |- template
+
        |-   js
+       
        |-   Scripts
+       
        |-   css
+       
               |-   img
+              
        |-   sass
+       
        |-   img
+       
 
 发布后的目录
+
 |- demo
+
        |- Scripts
+       
        |-  Images
+       
        |-  Themes
+       
                |-  default
+               
                          |-  img
+                         
                          |-  all.css
+                         
 
        
+       
 3、打开命令行工具，进入该目录
+
 4、执行命令： npm init
+
      这个命令能创建一个pack.json文件，你需要一步一步的配置好
+     
+
 
 怕麻烦就直接新建pack.json文件，里面内容是：
-=================================================
+
 {
 "name": "grunt-template",
 "version": "1.0.0",
@@ -59,31 +82,46 @@ myproject
 "load-grunt-tasks": "^3.4.0"
 }
 }
-====================================================
 
 5、安装常用组件
+
 执行命令：npm install grunt --save-dev
+
 这条命令将安装Grunt最新版本到项目目录中，并将其添加到pack.json中的devDependencies内
+
 
 常用安装有六个组件，分别是：sass预处理编译、concat合并、jshint检查语法、uglify压缩、watch监控、connect、livereload
 执行命令：
+
 npm install load-grunt-tasks --save-dev
+
 npm install grunt-contrib-sass  --save-dev
+
 npm install grunt-contrib-concat  --save-dev
+
 npm install grunt-contrib-jshint  --save-dev
+
 npm install grunt-contrib-uglify  --save-dev
+
 npm install grunt-contrib-watch  --save-dev
+
 npm install grunt-contrib-connect  --save-dev
+
 npm install connect-livereload  --save-dev
+
 npm install grunt-contrib-copy  --save-dev
+
 npm install grunt-contrib-cssmin  --save-dev
 
 
+
 6、新建gruntfile.js文件，这就是配置文件，告诉grunt该干什么？
+
 其内容基本分为三个部分组成：1、初始化任务，可理解为新建任务，2、加载任务， 3、注册任务，可理解为执行任务
 
+
 gruntfile.js文件内容如下：
-============================================================
+<pre>
 module.exports= function (grunt) {
 var sassStyle = 'expanded';
 require('load-grunt-tasks')(grunt); //加载所有的任务
@@ -242,12 +280,17 @@ grunt.registerTask('test', ['concat','sass','copy:copys','jshint']);
 grunt.registerTask('up',['copy:copyhtml','copy:copyjs','copy:copycss','copy:copyimg','cssmin','uglify']);
 grunt.registerTask('open', ['connect:server','watch']);
 };
-===============================================================
+
+
+</pre>
 
 7、修改gruntfile里面对应的路径，找不到的文件或文件夹全部补齐，或根据自己的目录设定
 
+
 9、撸码后，执行命令：
+
 grunt watch
+
 
 这个命令是开启监控，监控文件发生变化后，执行相应的任务！！！！
 
