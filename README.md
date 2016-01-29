@@ -57,7 +57,7 @@ myproject
 
 
 怕麻烦就直接新建pack.json文件，里面内容是：
-
+<pre>
 {
 "name": "grunt-template",
 "version": "1.0.0",
@@ -82,7 +82,7 @@ myproject
 "load-grunt-tasks": "^3.4.0"
 }
 }
-
+</pre>
 5、安装常用组件
 
 执行命令：npm install grunt --save-dev
